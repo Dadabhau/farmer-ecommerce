@@ -1,0 +1,15 @@
+p {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: Signika, 'Medium';
+  font-weight: 200;
+  font-style: normal;
+}
+.backgroundclss {
+  background-color: #f8f7f0;
+}
+
+.welcome {
+  font-family: Signika, 'Medium';
+  font-style: normal;
+  text-align: center;
+}
