@@ -1,24 +1,29 @@
 <div class="container-fluid d-flex justify-content-center align-items-center vh-100 backgroundclss">
-  <div class="card p-4" style="width: 100%; max-width: 500px">
-    <div class="text-center">
-      <img src="assets/logo.svg" width="150" alt="Logo" class="logo mb-4" />
-      <h1 class="welcome">Welcome</h1>
+  <app-card cardClass="p-3" [style]="{ width: '100%', maxWidth: '500px' }">
+    <div card-body>
+      <div class="text-center">
+        <img src="assets/logo.svg" width="150" alt="Logo" class="logo mb-4" />
+        <h1 class="welcome">Welcome Back!</h1>
 
-      <p class="text-center mb-4">Please Login</p>
+        <p class="text-center mb-4">Sign in to your account to continue</p>
+      </div>
+
+      <form #userForm="ngForm" (ngSubmit)="handleLogin(userForm.value)">
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email Address" id="email" />
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password" id="password" />
+        </div>
+        <button type="submit" appButton class="btn btn-primary w-100 buttonclss green">
+          Sign In
+          <span class="icon">
+            <img src="assets/arrow.svg" width="12" alt="Arrow Right" class="ms-2"
+          /></span>
+        </button>
+      </form>
+      <p class="pt-2 text-center">Don't have an account? <a href="#">Register</a></p>
     </div>
-
-    <form>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Email Address" id="email" />
-      </div>
-      <div class="mb-3">
-        <input type="password" class="form-control" placeholder="Password" id="password" />
-      </div>
-      <button type="submit" class="btn btn-primary w-100 buttonclss green">
-        Sign In
-
-        <img src="assets/arrow.svg" width="12" alt="Arrow Right" class="ms-2" />
-      </button>
-    </form>
-  </div>
+  </app-card>
+  <div></div>
 </div>

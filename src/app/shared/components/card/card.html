@@ -1,0 +1,35 @@
+<div
+  class="card"
+  [ngClass]="[variantClass, elevationClass, clickable ? 'cursor-pointer' : '', cardClass]"
+  [ngStyle]="cardStyle"
+  (click)="handleClick()"
+>
+  <!-- 🔄 Loading Overlay -->
+  @if (loading) {
+    <div class="card-loading">
+      <div class="spinner-border"></div>
+    </div>
+  }
+
+  <!-- 🖼 Image -->
+  <ng-content select="[card-img]"></ng-content>
+
+  @if (hasHeader) {
+    <!-- 🧩 Header -->
+    <div class="card-header">
+      <ng-content select="[card-header]"></ng-content>
+    </div>
+  }
+
+  <!-- 📄 Body -->
+  <div class="card-body">
+    <ng-content select="[card-body]"></ng-content>
+  </div>
+
+  @if (hasFooter) {
+    <!-- ⚙️ Footer -->
+    <div class="card-footer">
+      <ng-content select="[card-footer]"></ng-content>
+    </div>
+  }
+</div>

@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap');
 
+body {
+  font-family: Roboto, 'Medium';
+  font-weight: normal;
+  font-style: normal;
+  background-color: #f8f7f0;
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -11,14 +19,19 @@ h6 {
   font-family: Signika, 'Medium';
   font-style: normal;
 }
-
+p {
+  font-family: Roboto, 'Medium';
+  font-weight: normal;
+  font-style: normal;
+}
 .form-control {
-  font-family: Roboto, 'Regular';
   font-style: normal;
   background-color: #f8f7f0;
   height: 60px;
   border-radius: 10px;
   border: none;
+  color: #6c757d;
+  font-size: 15px;
 }
 .buttonclss {
   font-family: Signika, 'Medium';
@@ -30,4 +43,14 @@ h6 {
 .green {
   background-color: #5b8c51 !important;
   color: #fff !important;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(248, 247, 240, 1);
+}
+.btn:hover .icon {
+  transform: translateX(4px);
 }

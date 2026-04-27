@@ -1,0 +1,17 @@
+.buttonclss {
+  font-family: Signika, 'Medium';
+  font-style: normal;
+  border-radius: 40px;
+  height: 60px;
+  border: none;
+}
+.green {
+  background-color: #5b8c51 !important;
+  color: #fff !important;
+}
+
+.icon {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
